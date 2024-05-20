@@ -116,3 +116,13 @@ window.onload = loadPlanTable;
 var form = document.getElementById("searchform");
 function handleForm(event) { event.preventDefault(); } 
 form.addEventListener('submit', handleForm);
+
+window.postRecipe= async function(){
+
+    fetch("/plans", {
+        method: 'POST',
+        body: JSON.stringify({ recipes: 'hello' }),
+        headers: new Headers({ "Content-Type": "application/json" })
+    });
+}
+
