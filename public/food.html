@@ -2,7 +2,7 @@
 <script src="https://developer.edamam.com/attribution/badge.js"></script>
 <script type="text/Javascript" src="food.js" defer></script>
 <body>
-    <form onsubmit="createRecipe()">
+    <form onsubmit="getRecipes()" id="searchform" >
         <label for="food">Enter a food:</label>
         <input type="text" id="food" name="food" required>
 
@@ -29,7 +29,7 @@
         </select>
 
         <label for="healthType">Select health types:</label>
-        <select id="healthType" name="healthType" multiple></select>
+        <select id="healthType" name="healthType" multiple>
             <option value="alcohol-cocktail">Alcohol Cocktail</option>
             <option value="alcohol-free">Alcohol Free</option>
             <option value="celery-free">Celery Free</option>
@@ -80,6 +80,11 @@
 
         <button type="submit" name = "searchFood">Search</button>
     </form>
+
+    <div id="search-table">
+        <div id="plan-table"></div>
+          
+    </div>
 </body>
 
 <div id="edamam-badge" data-color="white"></div>
