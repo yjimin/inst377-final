@@ -67,7 +67,7 @@ The POST endpoint will take in a JSON under recipes. This is a short example ent
 ```
 ````
 
-## Running the server
+## Issues
 In the future, we need to enforce typings and formats for our database. Currently, these is no
 protections against this and the database will assume that all JSON inputs are valid.
 Through the website end, this can mean that an incomplete JSON can be stored in the
